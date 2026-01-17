@@ -76,7 +76,23 @@ section:nth-of-type(5) { animation-delay: 0.5s; }
 }
 
 /* RESUME BUTTON */
+resume-btn {
+  display: inline-block;
+  margin-top: 26px;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #a78bfa, #c4b5fd);
+  color: #120b1c;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
 
+.resume-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(167,139,250,0.45);
+}
 
 /* SECTIONS */
 section {
