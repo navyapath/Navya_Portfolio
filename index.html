@@ -6,7 +6,6 @@
   <title>Navya Pathak | Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
-
 <script>
   const toggleTheme = () => {
     document.body.classList.toggle("light-theme");
@@ -15,6 +14,7 @@
     document.querySelector(".theme-toggle").textContent = isLight ? "☀️" : "🌙";
   };
 
+  // Load saved theme
   window.onload = () => {
     if (localStorage.getItem("theme") === "light") {
       document.body.classList.add("light-theme");
@@ -27,13 +27,13 @@
 
 <!-- HERO -->
 <section class="hero">
-  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+  🌙
+</button>
 
-  <h1 class="hero-title">
-    Hi, I’m <span class="name">Navya Pathak</span>
-  </h1>
+  <h1>Hi, I’m <span class="name">Navya Pathak</span></h1>
 
-  <p class="hero-text glow-text">
+  <p class="hero-text">
     Electronics & Computer Science Engineering undergraduate focused on
     software engineering, data science, and AI/ML-driven system development.
   </p>
@@ -61,25 +61,78 @@
 </section>
 
 <!-- SKILLS -->
+<!-- SKILLS -->
 <section id="skills">
   <h2>Skills</h2>
 
   <div class="skills-grid">
-    <div class="skill"><img src="assets/skills/python.png"><span>Python</span></div>
-    <div class="skill"><img src="assets/skills/java.png"><span>Java</span></div>
-    <div class="skill"><img src="assets/skills/sql.png"><span>SQL</span></div>
-    <div class="skill"><img src="assets/skills/html.png"><span>HTML</span></div>
-    <div class="skill"><img src="assets/skills/css.png"><span>CSS</span></div>
-    <div class="skill"><img src="assets/skills/streamlit.png"><span>Streamlit</span></div>
-    <div class="skill"><img src="assets/skills/javascript.png"><span>Flask</span></div>
-    <div class="skill"><img src="assets/skills/c.png"><span>TensorFlow</span></div>
-    <div class="skill"><img src="assets/skills/ml.png"><span>Machine Learning</span></div>
-    <div class="skill"><img src="assets/skills/opencv.png"><span>Computer Vision</span></div>
-    <div class="skill"><img src="assets/skills/git.png"><span>Git</span></div>
-    <div class="skill"><img src="assets/skills/github.png"><span>GitHub</span></div>
-    <div class="skill"><img src="assets/skills/raspberrypi.svg"><span>Raspberry Pi</span></div>
+    <div class="skill">
+      <img src="assets/skills/python.png" alt="Python">
+      <span>Python</span>
+    </div>
+
+    <div class="skill">
+      <img src="assets/skills/java.png" alt="Java">
+      <span>Java</span>
+    </div>
+
+    <div class="skill">
+      <img src="assets/skills/sql.png" alt="SQL">
+      <span>SQL</span>
+    </div>
+
+    <div class="skill">
+      <img src="assets/skills/html.png" alt="HTML">
+      <span>HTML</span>
+    </div>
+
+    <div class="skill">
+      <img src="assets/skills/css.png" alt="CSS">
+      <span>CSS</span>
+    </div>
+
+    <div class="skill">
+      <img src="assets/skills/streamlit.png" alt="Streamlit">
+      <span>Streamlit</span>
+    </div>
+
+    <div class="skill">
+      <img src="assets/skills/javascript.png" alt="Javascript">
+      <span>Flask</span>
+    </div>
+
+    <div class="skill">
+      <img src="assets/skills/c.png" alt="C">
+      <span>TensorFlow</span>
+    </div>
+
+    <div class="skill">
+      <img src="assets/skills/ml.png" alt="Machine Learning">
+      <span>Machine Learning</span>
+    </div>
+
+    <div class="skill">
+      <img src="assets/skills/opencv.png" alt="Computer Vision">
+      <span>Computer Vision</span>
+    </div>
+
+    <div class="skill">
+      <img src="assets/skills/git.png" alt="Git">
+      <span>Git</span>
+    </div>
+
+    <div class="skill">
+      <img src="assets/skills/github.png" alt="GitHub">
+      <span>GitHub</span>
+    </div>
+
+    <div class="skill">
+      <img src="assets/skills/raspberrypi.svg" alt="Raspberry Pi">
+      <span>Raspberry Pi</span>
+    </div>
   </div>
 </section>
+
 
 <!-- PROJECTS -->
 <section id="projects">
@@ -87,9 +140,17 @@
 
   <div class="project">
     <h3>AI-Powered Multi-Disease Prediction System</h3>
-    <p>Developed ML models for diabetes, heart, and kidney disease prediction.</p>
-    <p>Achieved 85% accuracy and deployed via Streamlit.</p>
-    <span class="tech-stack">Python · ML · Streamlit</span>
+    <p>
+      Developed machine learning models to predict diabetes, heart disease,
+      and kidney disease using multiple medical datasets.
+    </p>
+    <p>
+      Achieved up to 85% prediction accuracy and deployed the application
+      using Streamlit for real-time inference.
+    </p>
+    <span class="tech-stack">
+      Python · Machine Learning · Streamlit · Data Analysis
+    </span>
     <a href="https://github.com/navyapath/multiple_disease_predict" target="_blank" class="project-link">
       View on GitHub →
     </a>
@@ -97,19 +158,100 @@
 
   <div class="project">
     <h3>Driver Drowsiness Detection System</h3>
-    <p>Real-time EAR-based drowsiness detection using OpenCV.</p>
-    <p>Triggered alerts within 1–2 seconds.</p>
-    <span class="tech-stack">Python · OpenCV · CV</span>
+    <p>
+      Built a real-time computer vision system using facial landmark detection
+      and Eye Aspect Ratio (EAR) analysis to detect driver fatigue.
+    </p>
+    <p>
+      Detected drowsiness within 1–2 seconds and triggered alert mechanisms
+      using Python and OpenCV.
+    </p>
+    <span class="tech-stack">
+      Python · OpenCV · Computer Vision
+    </span>
     <a href="https://github.com/navyapath/VisionWatch-Embedded-Driver-Safety-System" target="_blank" class="project-link">
       View on GitHub →
     </a>
   </div>
 
   <div class="project">
-    <h3>Smart Traffic Light System</h3>
-    <p>Adaptive Raspberry Pi–based traffic signal prototype.</p>
-    <p>Reduced violations by 20–25% in simulations.</p>
-    <span class="tech-stack">Python · IoT · Raspberry Pi</span>
+    <h3>Smart Traffic Light System (Prototype)</h3>
+    <p>
+      Designed a Raspberry Pi–based adaptive traffic signal system providing
+      real-time signal status and speed guidance to drivers.
+    </p>
+    <p>
+      Simulation results showed a 20–25% reduction in traffic violations and
+      near-miss scenarios.
+    </p>
+    <span class="tech-stack">
+      Python · IoT · Raspberry Pi
+    </span>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <h2>Certifications & Learning</h2>
+
+  <div class="cert-list">
+    <div class="cert-item">
+      <span><strong> Career Essentials in Generative AI </strong> – LinkedIn</span>
+      <a href="https://www.linkedin.com/learning/certificates/e4d5d57587d88b9304d8129761a2f3c3fad0f1dcffc586d36ad26fd328ad3dcd?trk=share_certificate" target="_blank">
+        View Certificate →
+      </a>
+    </div>
+    <div class="cert-item">
+      <span><strong> Ethics in the Age of Generative AI </strong> – LinkedIn</span>
+      <a href="https://www.linkedin.com/learning/certificates/dd8dfd6534b604cf1a1d2a1721d71d950b553ece05a0b9e9630951c99ab7b9e0" target="_blank">
+        View Certificate →
+      </a>
+    </div>
+    <div class="cert-item">
+      <span><strong> SQL for Beginners </strong> – Scaler</span>
+      <a href="https://moonshot.scaler.com/s/sl/p3tPNHGLmt?_gl=1*v8lbi0*FPAU*MjU0MTY1MTk3LjE3NDI3MTE4ODQ.*_ga*OTE4MDg2NDY0LjE3MzMxNDM0NzM.*_ga_53S71ZZG1X*MTc0NjQzODE1Ny4zMi4xLjE3NDY0MzgyMjcuMC4wLjExMzk5NzU3NjY." target="_blank">
+        View Certificate →
+      </a>
+    </div>
+    <div class="cert-item">
+      <span><strong>Deloitte Data Analytics Job Simulation</strong> – Forage</span>
+      <a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_3xKjm9ngoJkeZ22rD_1746869173503_completion_certificate.pdf" target="_blank">
+        View Certificate →
+      </a>
+    </div>
+    <div class="cert-item">
+      <span>
+        <strong>Walmart USA – Advanced Software Engineering Job Simulation</strong> – Forage
+      </span>
+      <a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/prBZoAihniNijyD6d/oX6f9BbCL9kJDJzfg_prBZoAihniNijyD6d_3xKjm9ngoJkeZ22rD_1746901096297_completion_certificate.pdf" target="_blank">
+        View Certificate →
+      </a>
+    </div>
+     <div class="cert-item">
+      <span>
+        <strong>JavaScript Algorithms and Data Structures</strong> – freeCodeCamp
+      </span>
+      <a href="https://www.freecodecamp.org/certification/navyapathak/javascript-algorithms-and-data-structures-v8" target="_blank">
+        View Certificate →
+      </a>
+    </div>
+    <div class="cert-item">
+      <span>
+        <strong>Responsive Web Design</strong> – freeCodeCamp
+      </span>
+      <a href="https://www.freecodecamp.org/certification/navyapathak/responsive-web-design" target="_blank">
+        View Certificate →
+      </a>
+    </div>
+    <div class="cert-item">
+      <span>
+        <strong>Python</strong> – freeCodeCamp
+      </span>
+      <a href="https://www.freecodecamp.org/certification/navyapathak/python-v9" target="_blank">
+        View Certificate →
+      </a>
+    </div>
+
   </div>
 </section>
 
@@ -117,16 +259,10 @@
 <section id="contact">
   <h2>Let’s Connect!</h2>
 
-  <div class="socials glow-icons">
-    <a href="mailto:thatsme.pathaknavya@gmail.com">
-      <img src="assets/gmail.svg" alt="Gmail">
-    </a>
-    <a href="https://github.com/navyapath" target="_blank">
-      <img src="assets/github.svg" alt="GitHub">
-    </a>
-    <a href="https://www.linkedin.com/in/navya-pathak-40aa762a7/" target="_blank">
-      <img src="assets/linkedin.svg" alt="LinkedIn">
-    </a>
+  <div class="socials">
+  <a href="mailto:thatsme.pathaknavya@gmail.com"> <img src="assets/gmail.svg" alt="Gmail"></a> 
+    <a href="https://github.com/navyapath" target="_blank"> <img src="assets/github.svg" alt="Github"></a>
+    <a href="https://www.linkedin.com/in/navya-pathak-40aa762a7/" target="_blank"edI <img src="assets/linkedin.svg" alt="LinkedIn"></a>
   </div>
 </section>
 
