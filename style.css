@@ -76,7 +76,7 @@ section:nth-of-type(5) { animation-delay: 0.5s; }
 }
 
 /* RESUME BUTTON */
-resume-btn {
+.resume-btn {
   display: inline-block;
   margin-top: 26px;
   padding: 12px 28px;
@@ -92,6 +92,34 @@ resume-btn {
 .resume-btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 14px 36px rgba(167,139,250,0.45);
+}
+/* RESUME BUTTON ANIMATION */
+.resume-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255,255,255,0.4),
+    transparent 70%
+  );
+  transform: translateX(-100%);
+}
+
+.resume-btn:hover::after {
+  animation: shine 0.9s ease;
+}
+
+@keyframes shine {
+  to {
+    transform: translateX(100%);
+  }
 }
 
 /* SECTIONS */
@@ -317,3 +345,26 @@ h2 {
 .skill span {
   margin-left: 8px;
 }
+/* GITHUB ICON SPECIAL ANIMATION */
+.socials a[href*="github"] img {
+  animation: githubPulse 3s ease-in-out infinite;
+}
+
+@keyframes githubPulse {
+  0% {
+    transform: scale(1);
+    filter: invert(1) drop-shadow(0 0 0 rgba(167,139,250,0));
+  }
+  50% {
+    transform: scale(1.08);
+    filter: invert(1) drop-shadow(0 0 12px rgba(167,139,250,0.8));
+  }
+  100% {
+    transform: scale(1);
+    filter: invert(1) drop-shadow(0 0 0 rgba(167,139,250,0));
+  }
+}
+.socials img:hover {
+  animation-play-state: paused;
+}
+
