@@ -346,6 +346,20 @@ h2 {
   margin-left: 8px;
 }
 /* GITHUB ICON SPECIAL ANIMATION */
+/* SOCIAL ICON BASE */
+.socials img {
+  width: 34px;
+  height: 34px;
+  transition: all 0.35s ease;
+}
+
+/* HOVER GLOW */
+.socials img:hover {
+  transform: scale(1.25);
+  filter: drop-shadow(0 0 14px rgba(167,139,250,0.9));
+}
+
+/* GITHUB ICON PULSE */
 .socials a[href*="github"] img {
   animation: githubPulse 3s ease-in-out infinite;
 }
@@ -353,18 +367,20 @@ h2 {
 @keyframes githubPulse {
   0% {
     transform: scale(1);
-    filter: invert(1) drop-shadow(0 0 0 rgba(167,139,250,0));
   }
   50% {
     transform: scale(1.08);
-    filter: invert(1) drop-shadow(0 0 12px rgba(167,139,250,0.8));
   }
   100% {
     transform: scale(1);
-    filter: invert(1) drop-shadow(0 0 0 rgba(167,139,250,0));
   }
 }
+
+/* Pause animation on hover */
 .socials img:hover {
   animation-play-state: paused;
+}
+.socials a {
+  color: #c4b5fd;
 }
 
