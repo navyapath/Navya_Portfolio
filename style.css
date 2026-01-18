@@ -125,6 +125,22 @@ h2 {
   font-size: 1.6rem;
   letter-spacing: 0.3px;
 }
+/* PROJECT LINKS – RESTORED STYLE */
+.project a {
+  display: inline-block;        /* Forces next line */
+  margin-top: 10px;
+  color: #c4b5fd;               /* Soft purple */
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.project a:hover {
+  transform: translateX(6px);
+  text-decoration: underline;
+  color: #f0abfc;               /* Brighter accent on hover */
+}
+
 
 /* SKILLS */
 .skills-grid {
