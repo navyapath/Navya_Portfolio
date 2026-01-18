@@ -160,6 +160,49 @@ h2 {
 .skill span {
   margin-left: 8px;
 }
+/* CERTIFICATIONS */
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.cert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid rgba(167,139,250,0.45);
+  border-radius: 6px;
+  transition: all 0.35s ease;
+}
+
+.cert-item:hover {
+  background: rgba(167,139,250,0.14);
+  border-left-color: #c4b5fd;
+  transform: translateX(8px);
+}
+
+.cert-item span {
+  font-size: 0.95rem;
+  color: #ede9fe;
+  max-width: 78%;
+}
+
+.cert-item a {
+  font-size: 0.85rem;
+  color: #c4b5fd;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.cert-item a:hover {
+  text-decoration: underline;
+  transform: translateX(4px);
+}
 
 /* CONTACT / SOCIAL ICONS */
 .socials {
