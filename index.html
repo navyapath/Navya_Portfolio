@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navya Pathak | Engineering Portfolio</title>
+    <title>Navya Pathak | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="scanline"></div>
     <div class="matrix-bg"></div>
 
     <nav class="navbar">
@@ -16,87 +17,95 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certs</a></li>
+                <li><a href="#certifications">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
         </div>
     </nav>
 
     <section class="hero">
-        <h1 class="flicker-slow">Hey, I'm <span class="name neon-text">Navya Pathak</span></h1>
-        <p class="hero-text">
-            Electronics & Computer Science Engineering undergraduate focused on 
-            software engineering, data science, and AI/ML-driven systems.
-        </p>
+        <h1 class="flicker">Hey, I'm <span class="name neon-text">Navya Pathak</span></h1>
+        <p class="hero-text">Electronics & Computer Science Engineering undergraduate focused on AI/ML-driven system development and software engineering.</p>
         <div class="hero-btns">
-            <a href="assets/Resume_Navya.pdf" download class="resume-btn">DOWNLOAD_RESUME</a>
-            <a href="#projects" class="secondary-btn">VIEW_PROJECTS</a>
+            <a href="assets/Resume_Navya.pdf" download class="resume-btn">GET_RESUME.exe</a>
+            <a href="#projects" class="secondary-btn">VIEW_WORKS</a>
         </div>
     </section>
 
     <section id="about">
-        <h2><span class="neon-text-purple">> ABOUT_ME</span></h2>
+        <h2><span class="neon-text-purple">> SYSTEM_MANIFESTO</span></h2>
         <div class="terminal-window">
             <div class="terminal-header">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="terminal-title">bash — navya_profile</span>
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="terminal-title">navya@ubuntu: ~</span>
             </div>
             <div class="terminal-body">
-                <p class="terminal-line"><span class="prompt">navya@portfolio:~$</span> <span id="typing-text"></span><span class="cursor">|</span></p>
+                <p><span class="prompt">navya@portfolio:~$</span> <span id="typing-text"></span><span class="cursor">_</span></p>
             </div>
         </div>
     </section>
 
     <section id="skills">
-        <h2><span class="neon-text">TECHNICAL_SKILLS</span></h2>
+        <h2><span class="neon-text">TECH_STACK</span></h2>
         <div class="skills-grid">
-            <div class="skill"><img src="assets/skills/python.png" alt="Python"><span>Python</span></div>
-            <div class="skill"><img src="assets/skills/java.png" alt="Java"><span>Java</span></div>
-            <div class="skill"><img src="assets/skills/sql.png" alt="SQL"><span>SQL</span></div>
-            <div class="skill"><img src="assets/skills/streamlit.png" alt="Streamlit"><span>Streamlit</span></div>
-            <div class="skill"><img src="assets/skills/javascript.png" alt="JS"><span>Javascript</span></div>
-            <div class="skill"><img src="assets/skills/c.png" alt="C"><span>C</span></div>
-            <div class="skill"><img src="assets/skills/ml.png" alt="ML"><span>ML</span></div>
-            <div class="skill"><img src="assets/skills/opencv.png" alt="CV"><span>OpenCV</span></div>
-            <div class="skill"><img src="assets/skills/git.png" alt="Git"><span>Git</span></div>
-            <div class="skill"><img src="assets/skills/raspberrypi.png" alt="Pi"><span>IoT</span></div>
+            <div class="skill"><img src="assets/skills/python.png"><span>Python</span></div>
+            <div class="skill"><img src="assets/skills/java.png"><span>Java</span></div>
+            <div class="skill"><img src="assets/skills/sql.png"><span>SQL</span></div>
+            <div class="skill"><img src="assets/skills/streamlit.png"><span>Streamlit</span></div>
+            <div class="skill"><img src="assets/skills/javascript.png"><span>JS</span></div>
+            <div class="skill"><img src="assets/skills/ml.png"><span>ML</span></div>
+            <div class="skill"><img src="assets/skills/opencv.png"><span>OpenCV</span></div>
+            <div class="skill"><img src="assets/skills/raspberrypi.png"><span>IoT/Pi</span></div>
+            <div class="skill"><img src="assets/skills/git.png"><span>Git</span></div>
+            <div class="skill"><img src="assets/skills/github.png"><span>GitHub</span></div>
         </div>
     </section>
 
     <section id="projects">
-        <h2><span class="neon-text">CORE_PROJECTS</span></h2>
-        <div class="project">
-            <h3>AI Multi-Disease Prediction</h3>
-            <p>ML models predicting diabetes, heart, and kidney diseases with 85% accuracy.</p>
-            <span class="tech-stack">Python · ML · Streamlit</span>
-            <a href="https://github.com/navyapath/multiple_disease_predict" target="_blank" class="project-link">VIEW_SOURCE →</a>
-        </div>
-        <div class="project">
-            <h3>Driver Drowsiness System</h3>
-            <p>Real-time CV system using EAR analysis to detect fatigue within 2 seconds.</p>
-            <span class="tech-stack">Python · OpenCV · CV</span>
-            <a href="https://github.com/navyapath/VisionWatch-Embedded-Driver-Safety-System" target="_blank" class="project-link">VIEW_SOURCE →</a>
+        <h2><span class="neon-text">PROJECT_LOGS</span></h2>
+        <div class="project-container">
+            <div class="project-card">
+                <h3>AI Multi-Disease Prediction</h3>
+                <p>ML models for diabetes, heart, and kidney disease prediction with 85% accuracy.</p>
+                <div class="tech-stack">Python · ML · Streamlit · Data Analysis</div>
+                <a href="https://github.com/navyapath/multiple_disease_predict" class="project-link">ACCESS_SOURCE →</a>
+            </div>
+            <div class="project-card">
+                <h3>Driver Drowsiness Detection</h3>
+                <p>Real-time CV system using EAR analysis and facial landmarks to detect fatigue.</p>
+                <div class="tech-stack">Python · OpenCV · Computer Vision</div>
+                <a href="https://github.com/navyapath/VisionWatch-Embedded-Driver-Safety-System" class="project-link">ACCESS_SOURCE →</a>
+            </div>
+            <div class="project-card">
+                <h3>Smart Traffic Light System</h3>
+                <p>Raspberry Pi adaptive signal system reducing traffic violations by 25%.</p>
+                <div class="tech-stack">Python · IoT · Raspberry Pi</div>
+                <span class="status-tag">Prototype Built</span>
+            </div>
         </div>
     </section>
 
     <section id="certifications">
-        <h2><span class="neon-text-purple">CERTIFICATIONS</span></h2>
-        <div class="cert-list">
-            <div class="cert-item"><span>Career Essentials in Gen AI – LinkedIn</span><a href="#">VIEW_CERT →</a></div>
-            <div class="cert-item"><span>Data Analytics Job Sim – Deloitte</span><a href="#">VIEW_CERT →</a></div>
-            <div class="cert-item"><span>JS Algorithms – freeCodeCamp</span><a href="#">VIEW_CERT →</a></div>
+        <h2><span class="neon-text-purple">VALIDATED_CREDENTIALS</span></h2>
+        <div class="cert-grid">
+            <div class="cert-item"><span>Generative AI Essentials - LinkedIn</span><a href="#">VIEW</a></div>
+            <div class="cert-item"><span>Ethics in Gen AI - LinkedIn</span><a href="#">VIEW</a></div>
+            <div class="cert-item"><span>SQL for Beginners - Scaler</span><a href="#">VIEW</a></div>
+            <div class="cert-item"><span>Data Analytics Sim - Deloitte</span><a href="#">VIEW</a></div>
+            <div class="cert-item"><span>Software Engineering Sim - Walmart</span><a href="#">VIEW</a></div>
+            <div class="cert-item"><span>JS Algorithms - freeCodeCamp</span><a href="#">VIEW</a></div>
+            <div class="cert-item"><span>Responsive Web Design - freeCodeCamp</span><a href="#">VIEW</a></div>
+            <div class="cert-item"><span>Python - freeCodeCamp</span><a href="#">VIEW</a></div>
         </div>
     </section>
 
     <section id="contact">
-        <h2><span class="neon-text">CONNECT</span></h2>
+        <h2><span class="neon-text">ESTABLISH_UPLINK</span></h2>
         <div class="socials">
-            <a href="mailto:thatsme.pathaknavya@gmail.com"><img src="assets/gmail.svg" alt="Email"></a>
-            <a href="https://github.com/navyapath" target="_blank"><img src="assets/github.svg" alt="Github"></a>
-            <a href="https://linkedin.com/in/navya-pathak-40aa762a7/" target="_blank"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
+            <a href="mailto:thatsme.pathaknavya@gmail.com"><img src="assets/gmail.svg"></a>
+            <a href="https://github.com/navyapath"><img src="assets/github.svg"></a>
+            <a href="https://linkedin.com/in/navya-pathak-40aa762a7/"><img src="assets/linkedin.svg"></a>
         </div>
     </section>
 
