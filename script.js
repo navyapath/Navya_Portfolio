@@ -19,9 +19,33 @@ const observer = new IntersectionObserver((entries) => {
     }
 }, { threshold: 0.5 });
 
-observer.observe(document.querySelector(".terminal-window"));
-
-// Theme Toggle logic
-function toggleTheme() {
-    document.body.classList.toggle("light-theme");
+if(document.querySelector(".terminal-window")) {
+    observer.observe(document.querySelector(".terminal-window"));
 }
+
+// Theme Toggle logic with Icon Swap and LocalStorage
+function toggleTheme() {
+    const body = document.body;
+    const themeBtn = document.querySelector(".theme-toggle");
+    
+    body.classList.toggle("light-theme");
+    
+    if (body.classList.contains("light-theme")) {
+        themeBtn.innerHTML = "☀️";
+        localStorage.setItem("theme", "light");
+    } else {
+        themeBtn.innerHTML = "🌙";
+        localStorage.setItem("theme", "dark");
+    }
+}
+
+// Check for saved theme preference on load
+window.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    const themeBtn = document.querySelector(".theme-toggle");
+    
+    if (savedTheme === "light") {
+        document.body.classList.add("light-theme");
+        themeBtn.innerHTML = "☀️";
+    }
+});
