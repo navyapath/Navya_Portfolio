@@ -4,8 +4,9 @@ let charIndex = 0;
 const typingElement = document.getElementById("typing-text");
 
 function type() {
-    if (charIndex < bio.length) {
-        typingElement.innerHTML += bio.charAt(charIndex);
+    if (typingElement && charIndex < bio.length) {
+        // Using textContent is slightly faster and safer than innerHTML
+        typingElement.textContent += bio.charAt(charIndex);
         charIndex++;
         setTimeout(type, 30);
     }
@@ -15,37 +16,42 @@ function type() {
 const observer = new IntersectionObserver((entries) => {
     if(entries[0].isIntersecting) {
         type();
-        observer.disconnect(); // Only type once
+        observer.disconnect(); 
     }
 }, { threshold: 0.5 });
 
-if(document.querySelector(".terminal-window")) {
-    observer.observe(document.querySelector(".terminal-window"));
+const terminal = document.querySelector(".terminal-window");
+if(terminal) {
+    observer.observe(terminal);
 }
 
-// Theme Toggle logic with Icon Swap and LocalStorage
+// THEME TOGGLE LOGIC
 function toggleTheme() {
     const body = document.body;
     const themeBtn = document.querySelector(".theme-toggle");
     
-    body.classList.toggle("light-theme");
+    const isLight = body.classList.toggle("light-theme");
     
-    if (body.classList.contains("light-theme")) {
-        themeBtn.innerHTML = "☀️";
-        localStorage.setItem("theme", "light");
-    } else {
-        themeBtn.innerHTML = "🌙";
-        localStorage.setItem("theme", "dark");
-    }
+    // Update button icon
+    themeBtn.innerHTML = isLight ? "☀️" : "🌙";
+    
+    // Save preference
+    localStorage.setItem("theme", isLight ? "light" : "dark");
 }
 
-// Check for saved theme preference on load
-window.addEventListener("DOMContentLoaded", () => {
+// APPLY THEME IMMEDIATELY (To prevent "flashing" on refresh)
+(function() {
     const savedTheme = localStorage.getItem("theme");
-    const themeBtn = document.querySelector(".theme-toggle");
-    
     if (savedTheme === "light") {
         document.body.classList.add("light-theme");
+        // We handle the button icon after the DOM is ready below
+    }
+})();
+
+// Handle the button icon state once the page loads
+window.addEventListener("DOMContentLoaded", () => {
+    const themeBtn = document.querySelector(".theme-toggle");
+    if (localStorage.getItem("theme") === "light" && themeBtn) {
         themeBtn.innerHTML = "☀️";
     }
 });
